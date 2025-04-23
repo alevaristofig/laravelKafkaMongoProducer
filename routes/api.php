@@ -19,6 +19,7 @@ Route::prefix('v1')->group(function() {
         function() {
             Route::get('/usuarios',[UsuarioMensagensController::class,'index']);
             Route::post('/usuarios',[UsuarioMensagensController::class,'adicionar']);
+            Route::get('/usuarios/produzirmensagem/{id}',[UsuarioMensagensController::class,'produzirMensagens']);
         }
     );
 
