@@ -39,6 +39,7 @@ Route::prefix('v1')->group(function() {
         function() {
             Route::get('/medicamentos',[MedicamentoMensagensController::class,'index']);
             Route::post('/medicamentos',[MedicamentoMensagensController::class,'adicionar']);
+            Route::get('/medicamentos/produzirmensagem/{id}',[MedicamentoMensagensController::class,'produzirMensagens']);
         }
     );
 
