@@ -49,6 +49,7 @@ Route::prefix('v1')->group(function() {
         function() {
             Route::get('/aplicacao',[AplicacaoMensagensController::class,'index']);
             Route::post('/aplicacao',[AplicacaoMensagensController::class,'adicionar']);
+            Route::get('/aplicacao/produzirmensagem/{id}',[AplicacaoMensagensController::class,'produzirMensagens']);
         }
     );
 });
